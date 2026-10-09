@@ -1,0 +1,44 @@
+/* Linework support pages: the game's own palette (ink ground, cream type, mint line, coral accent). No scripts, no external requests. */
+:root {
+  --ink: #1c1729;
+  --ink-2: #2a2340;
+  --cream: #f5ebdc;
+  --cream-dim: #cfc5d8;
+  --mint: #70f2d1;
+  --coral: #ff5e6e;
+  --rule: rgba(245, 235, 220, 0.16);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: radial-gradient(120% 80% at 50% 0%, #3a3157 0%, var(--ink) 60%) fixed, var(--ink);
+  color: var(--cream);
+  font: 17px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--mint); text-underline-offset: 3px; }
+a:hover { color: #fff; }
+a:focus-visible, .button:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; border-radius: 4px; }
+header.band { border-bottom: 1px solid var(--rule); }
+.home { display: flex; align-items: center; gap: 14px; max-width: 42rem; margin: 0 auto; padding: 16px 20px; text-decoration: none; color: var(--cream); }
+.home img { width: 40px; height: 40px; border-radius: 9px; }
+.logo { font-weight: 300; letter-spacing: 0.32em; text-transform: uppercase; font-size: 15px; }
+main { max-width: 42rem; margin: 0 auto; padding: 36px 20px 64px; }
+h1 { font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; font-size: clamp(26px, 6vw, 38px); line-height: 1.2; margin: 0 0 6px; }
+h2 { font-weight: 500; font-size: 20px; margin: 40px 0 8px; padding-top: 22px; border-top: 1px solid var(--rule); }
+h2:first-of-type { border-top: 0; padding-top: 0; }
+.sub { color: var(--cream-dim); margin: 0 0 24px; }
+.effective { color: var(--cream-dim); font-size: 15px; margin: 0 0 28px; }
+.hero { display: block; width: 168px; height: 168px; border-radius: 36px; margin: 8px 0 28px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45); }
+.lede { font-size: 19px; }
+.panel { background: var(--ink-2); border: 1px solid var(--rule); border-radius: 14px; padding: 20px 22px; margin: 18px 0; }
+.panel h2 { margin-top: 0; border: 0; padding-top: 0; }
+.button { display: inline-block; background: var(--coral); color: #1c1729; font-weight: 600; padding: 11px 20px; border-radius: 999px; text-decoration: none; }
+.button:hover { background: #ff8591; color: #1c1729; }
+ul, ol { padding-left: 1.2em; }
+li { margin: 6px 0; }
+code, kbd { font: 0.92em ui-monospace, SFMono-Regular, Menlo, monospace; background: rgba(245, 235, 220, 0.1); padding: 1px 6px; border-radius: 5px; }
+nav.links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 22px 0 0; }
+footer { max-width: 42rem; margin: 0 auto; padding: 22px 20px 48px; border-top: 1px solid var(--rule); color: var(--cream-dim); font-size: 15px; }
+footer a { color: var(--cream-dim); }
+@media (max-width: 480px) { body { font-size: 16px; } main { padding-top: 26px; } }
